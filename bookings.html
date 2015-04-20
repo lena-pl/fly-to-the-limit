@@ -10,6 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link href='css/rome.css' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
@@ -82,15 +83,29 @@
 
 			<div class= "col-row">
 				<div class="col-2"><span>&nbsp;</span></div>
+				<div class="col-8">
+					<div class="col-row">
+						<div class="centered-label"><span class="bookings-date">Pick a Date Range</span></div>
+					</div> 
+					<div class="date cf">
+						<div id="dateLeft"></div>
+						<div id="dateRight"></div>
+					</div>
+				</div>
+				<div class="col-2"><span>&nbsp;</span></div>
+			</div>
+
+			<div class= "col-row">
+				<div class="col-2"><span>&nbsp;</span></div>
 				<div class=" col-4">
 					<label>
-						<span class="bookings-people">Number of passengers</span>
+						<span class="bookings-people">Number of Passengers</span>
 						<input type="text" name="people" placeholder="1" required>
 					</label>
 				</div>
 				<div class="col-4">
 					<label>
-						Choose a tour option
+						Choose a Tour Option
 						<select name="tours">
 							<option value="Glider 1hr" selected>Glider 2hr Scenic Tour</option>
 							<option value="Glider 2hr">Glider 1hr Scenic Tour</option>
@@ -111,7 +126,7 @@
 			<div class= "col-row">
 				<div class="col-2"><span>&nbsp;</span></div>
 				<div class="col-8">
-					<label>
+					<label class="centered-label">
 						<span class="bookings-message">Leave us a message</span>
 						<textarea name="comments" placeholder="Tell us a bit more about your requirements..." required></textarea>
 					</label>
@@ -182,10 +197,22 @@
 			</div>
 		</footer>
 
+<script src='js/rome.js'></script>
 <script src="js/form-validation-kit.js"></script>
 
 <script>
-	document.addEventListener("DOMContentLoaded", function() {
+
+rome(dateLeft, {
+	dateValidator: rome.val.beforeEq(dateRight),
+	time: false
+});
+
+rome(dateRight, {
+	dateValidator: rome.val.afterEq(dateLeft),
+	time: false
+});
+
+document.addEventListener("DOMContentLoaded", function() {
 
 	var contactForm = document.querySelector("#enquiries");
 
