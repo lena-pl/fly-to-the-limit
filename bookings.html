@@ -2,9 +2,9 @@
 <html lang="en-NZ">
 
 <head>
-	<title>Fly to the Limit</title>
+	<title>Booking Enquiries</title>
 	<meta charset="utf-8">
-	<meta name="description" content="Adventure flights out of Queenstown and Wanaka, New Zealand.">
+	<meta name="description" content="Book an adventure flight around the Southern Lakes.">
 	<meta name="author" content="Lena Plaksina">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,7 +45,7 @@
 		<div class="bookings-feature cf">
 
 				<div class="heading-highlight">
-					<h2>Bookings</h2>
+					<h2>Booking Enquiries</h2>
 					<h3>Start your adventure today.</h3>
 					<p>We want to tailor an adventure package that’s right for you. Fill out the form below so we can get an idea of your needs.</p>
 				</div>
@@ -57,26 +57,28 @@
 			<div class="col-2"><span>&nbsp;</span></div>
 
 			<div class="col-8">
-				<h1>Get in touch!</h1>
+				<h1>Enquire about our flights!</h1>
 			</div>
 
 			<div class="col-2"><span>&nbsp;</span></div>
 		</div>
 
-		<form id="bookings" method="post">
+		<form id="bookings" method="post" novalidate>
 			<div class= "col-row">
 				<div class="col-2"><span>&nbsp;</span></div>
 				<div class=" col-4">
-					<label>
+					<label for="name">
 						<span class="bookings-name">Your Name</span>
-						<input type="text" name="name" placeholder="John Doe" required>
 					</label>
+					<input id="name" class="fv-minlength-2" type="text" name="name" placeholder="John Doe" required>
+					<div id="name-error" class="danger"></div>
 				</div>
 				<div class="col-4">
-					<label>
+					<label for="email">
 						<span class="bookings-email">Your Email</span>
-						<input type="email" name="email" placeholder="john.doe@mail.com" required>
 					</label>
+					<input id="email" type="email" name="email" placeholder="john.doe@mail.com" required>
+					<div id="email-error" class="danger"></div>
 				</div>
 				<div class="col-2"><span>&nbsp;</span></div>
 			</div>
@@ -85,7 +87,7 @@
 				<div class="col-2"><span>&nbsp;</span></div>
 				<div class="col-8">
 					<div class="col-row">
-						<div class="centered-label"><span class="bookings-date">Pick a Date Range</span></div>
+						<div class="centered-label"><span class="bookings-date">Pick a date range to indicate your availability</span></div>
 					</div> 
 					<div class="date cf">
 						<div id="dateLeft"></div>
@@ -98,10 +100,11 @@
 			<div class= "col-row">
 				<div class="col-2"><span>&nbsp;</span></div>
 				<div class=" col-4">
-					<label>
+					<label for="people">
 						<span class="bookings-people">Number of Passengers</span>
-						<input type="text" name="people" placeholder="1" required>
 					</label>
+					<input id="people" type="text" name="people" placeholder="1" required>
+					<div id="people-error" class="danger"></div>
 				</div>
 				<div class="col-4">
 					<label>
@@ -126,10 +129,11 @@
 			<div class= "col-row">
 				<div class="col-2"><span>&nbsp;</span></div>
 				<div class="col-8">
-					<label class="centered-label">
+					<label for="comments" class="centered-label">
 						<span class="bookings-message">Leave us a message</span>
-						<textarea name="comments" placeholder="Tell us a bit more about your requirements..." required></textarea>
 					</label>
+					<textarea id="comments" class="fv-minlength-15" name="comments" placeholder="Tell us a bit more about your requirements..." required></textarea>
+					<div id="comments-error" class="danger"></div>
 				</div>
 				<div class="col-2"><span>&nbsp;</span></div>
 			</div>
@@ -152,24 +156,44 @@
 					<form id="enquiries" class="col-6" method="post" novalidate>
 						<h5>Get in touch!</h5>
 
-						<input type="text" name="name" placeholder="Your Name" required>
+						<div class="field">
+							<label for="contact-name">
+								<span class="enquiries-name">Your Name</span>
+							</label>
+							<input id="contact-name" class="fv-minlength-2" type="text" name="contact-name" placeholder="John Doe" required>
+							<div id="contact-name-error" class="danger"></div>
+						</div>
 
-						<input type="email" name="email" placeholder="Your Email" required>
+						<div class="field">
+							<label for="contact-email">
+								<span class="enquiries-email">Your Email</span>
+							</label>
+							<input id="contact-email" type="email" name="contact-email" placeholder="john.doe@mail.com" required>
+							<div id="contact-email-error" class="danger"></div>
+						</div>
 
-						<textarea name="comments" placeholder="Question or Comment" required></textarea>
+						<div class="field">
+							<label for="contact-comments">
+								<span class="enquiries-message">Your Question or Comment</span>
+							</label>
+							<textarea id="contact-comments" class="fv-minlength-15" name="contact-comments" placeholder="What's on your mind?" required></textarea>
+							<div id="contact-comments-error" class="danger"></div>
+						</div>
 
 						<input type="submit" name="submit" value="Submit" class="button">
 					</form>
 
 					<div class="col-1"><span>&nbsp;</span></div>
 
-					<div class="col-3">
-						<div>
+					<div class="in-footer col-3">
+						<div class="find-us">
 							<h5>Find Us</h5>
 							<p class="phone-number">0800 limitless</p>
 							<p>15 Wanaka Drive,</p>
 							<p>Wanaka, NZ</p>
 						</div>
+
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2834.816326019966!2d169.24425!3d-44.72336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d54b83e2df476b%3A0x1d00ef876a1e9ae0!2sWanaka+Airport!5e0!3m2!1sen!2snz!4v1429654931739" width="220" height="170" frameborder="0" style="border:0"></iframe>
 
 						<div class="social">
 							<a href="https://www.facebook.com/QueenstownNZ" target="_blank"><img src="images/facebook-icon.png" alt="Facebook" height="45" width="45"></a>
@@ -178,7 +202,7 @@
 						</div>
 					</div>
 
-					<div class="col-2">
+					<div class="in-footer col-2">
 						<div class="site-map">
 							<h5>Site Map</h5>
 							<ul>
@@ -210,6 +234,14 @@ rome(dateLeft, {
 rome(dateRight, {
 	dateValidator: rome.val.afterEq(dateLeft),
 	time: false
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+
+	var contactForm = document.querySelector("#bookings");
+
+	addFormValidation(contactForm);
+
 });
 
 document.addEventListener("DOMContentLoaded", function() {

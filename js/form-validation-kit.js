@@ -58,14 +58,14 @@ function validateField(el) {
 	}
 
 	if (el.type === "email" && !isEmail(el.value)) {
-		error = "please provide a valid email address.";
+		error = "Please provide a valid email address.";
 	}
 
 	if (el.className.indexOf("fv-minlength-") > -1) {
 		var pos = el.className.indexOf("fv-minlength-");
 		var minLength = parseInt( el.className.substr(pos+13), 10);
 		if (el.value.length < minLength) {
-			error = "must be " + minLength + " or more characters long.";
+			error = "Must be " + minLength + " or more characters long.";
 		}
 	}
 
@@ -74,7 +74,7 @@ function validateField(el) {
 		if (el.type === "checkbox" && !el.checked) {
 			error = "this must be checked.";
 		} else if (el.value.trim() === "") {
-			error = "this field must not be blank.";
+			error = "This field must not be blank.";
 		}
 	}
 

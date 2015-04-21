@@ -188,6 +188,11 @@ footer {
 	position: relative;
 }
 
+.in-footer {
+	position: relative;
+	height: 389px;
+}
+
 /*
   ========================================
   Footer Form
@@ -230,10 +235,50 @@ textarea {
 	cursor: pointer;
 	display: inline-block;
 	letter-spacing: 0.5px;
-	margin: 0;
+	margin: 10px 0 0 0;
 	text-transform: uppercase;
 	color: #131f2d;
 	font-weight: 600;
+}
+
+#enquiries .danger {
+	display: block;
+	position: absolute;
+	bottom: -20px;
+	right: 0;
+	background-color: #fff;
+	border-radius: 3px;
+}
+
+.enquiries-name {
+	background-image: url(../images/form-name-white.png);
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	margin: 0 3px 0 3px;
+	color: #fff;
+	font-weight: 300;
+}
+
+.enquiries-email {
+	background-image: url(../images/form-email-white.png);
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	margin: 0 3px 0 3px;
+	color: #fff;
+	font-weight: 300;
+}
+
+.enquiries-message {
+	background-image: url(../images/form-message-white.png);
+	background-repeat: no-repeat;
+	padding-left: 35px;
+	margin: 0 3px 0 3px;
+	color: #fff;
+	font-weight: 300;
+}
+
+#enquiries .field {
+	position: relative;
 }
 
 /*
@@ -242,14 +287,18 @@ textarea {
   ========================================
 */
 
+.find-us {
+	margin-bottom: 33px;
+}
+
 .social {
 	position: absolute;
-	bottom: -10px;
-	right: 240px;
+	bottom: -20px;
+	left: -10px;
 }
 
 .social img {
-	margin: 0 20px;
+	margin: 0 5px;
 }
 
 /*
@@ -288,13 +337,17 @@ textarea {
 
 .back-to-top {
 	position: absolute;
-	bottom: -10px;
-	right: 0;
+	bottom: -20px;
+	right: -10px;
 }
 
 .back-to-top a {
 	text-decoration: none;
 	color: #FFF;
+}
+
+.back-to-top a:hover {
+	color: rgba(102, 100, 100, 1);
 }
 
 /*
@@ -439,6 +492,19 @@ textarea {
 	font-weight: 300;
 }
 
+.danger {
+	color: #a32142;
+	font-size: 0.8em;
+	padding: 0 .5em;
+}
+
+#bookings .danger {
+	display: block;
+	position: absolute;
+	bottom: 25px;
+	left: 0;
+}
+
 .centered-label {
 	width: 620px;
 	text-align: center;
@@ -570,11 +636,11 @@ textarea {
 	margin: 0 10px;
 	float: left;
 	min-height: 1px;
+	position: relative;
 }
 
 .col-row {
 	margin: 0;
-	position: relative;
 }
 
 .col-1 {
@@ -683,8 +749,16 @@ textarea {
 	background-position: 0 0; 
 }
 
-.six {background-image: url("http://placehold.it/200&text=6"); }
-.seven {background-image: url("http://placehold.it/200&text=7"); }
-.eight {background-image: url("http://placehold.it/200&text=8"); }
-.nine {background-image: url("http://placehold.it/200&text=9"); }
-.ten {background-image: url("http://placehold.it/200&text=10"); }
+/*
+  ========================================
+  Gallery
+  ========================================
+*/
+
+.popup-gallery {
+	margin: 50px 8px 100px 8px;
+}
+
+.popup-gallery img {
+	margin: 5px;
+}
