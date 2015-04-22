@@ -10,6 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="stylesheet" href="css/magnific-popup.css"> 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
@@ -76,18 +77,20 @@
 			<div class="col-1"><span>&nbsp;</span></div>
 		</div>
 
-		<div class= "col-row">
-			<div class="col-2"><span>&nbsp;</span></div>
-
-			<div class="col-8">
-				<h1>Glider Gallery</h1>
-			</div>
-
-			<div class="col-2"><span>&nbsp;</span></div>
+		<div class="col-row cf">
+				<iframe class="video" width="886" height="498" src="https://www.youtube.com/embed/bFCoMqDGo_w" frameborder="0" allowfullscreen></iframe>
 		</div>
 
 		<div class="col-row cf">
-				<iframe class="video" width="886" height="498" src="https://www.youtube.com/embed/bFCoMqDGo_w" frameborder="0" allowfullscreen></iframe>
+			<div class="col-1"><span>&nbsp;</span></div>
+
+			<div class=" col-10 popup-gallery">
+				<a href="images/about-gallery/liz-west-southwest-air-pilots-flickr-unchanged.jpg" title="Pilots in the Cockpit <small>by Liz West</small>"><img src="images/about-gallery/liz-west-southwest-air-pilots-flickr-unchanged-thumb.jpg" width="247" height="200" alt="Pilots in the Cockpit"></a>
+				<a href="images/about-gallery/queenstown-urban-mikhail-keniya.jpg" title="Urban Queenstown <small>by Mikhail Keniya</small>"><img src="images/about-gallery/queenstown-urban-mikhail-keniya-thumb.jpg" width="247" height="200" alt="Urban Queenstown"></a>
+				<a href="images/about-gallery/unsafe-afafrica-pilot-for-a-day-in-iceland-flickr-unchanged.jpg" title="Pilot for a Day <small>by Unsafe Afafrica on Flickr</small>"><img src="images/about-gallery/unsafe-afafrica-pilot-for-a-day-in-iceland-flickr-unchanged-thumb.jpg" width="247" height="200" alt="Children listening to a pilot"></a>
+			</div>
+
+			<div class="col-1"><span>&nbsp;</span></div>
 		</div>
 	</div>
 
@@ -163,8 +166,30 @@
 			</div>
 		</footer>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
 <script src="js/form-validation-kit.js"></script>
 <script>
+$(document).ready(function() {
+	$('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		}
+	});
+});
+
 document.addEventListener("DOMContentLoaded", function() {
 
 	var contactForm = document.querySelector("#enquiries");
