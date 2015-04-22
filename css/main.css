@@ -555,6 +555,70 @@ textarea {
 	margin-top: 5px;
 }
 
+.tour-option {
+	padding: 50px 0 70px 0;
+	text-align: center;
+}
+
+.tour-option .regular {
+	text-align: left;
+}
+
+.tour-option h4 {
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+
+.tour-option .subheading {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.tour-option a {
+	text-decoration: none;
+	color: #666464;
+	position: relative;
+	display: inline-block;
+}
+
+.tour-option a:hover:after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(102, 100, 100, 0.5);
+	background-image: url(../images/blip-map-1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+}
+
+.tour-option img {
+	display: block;
+	margin: auto;
+	border-radius: 50%;
+	height: 185px;
+}
+
+/*
+  ========================================
+  Tours-Cessna
+  ========================================
+*/
+
+.tours-cessna-feature {
+	background-color: #131f2d;
+	background-image: url(../images/chris-devers-p-51-mustang-from-the-collings-foundation-taking-off-at-beverly-airport-flickr-unchanged.jpg);
+	background-size: 100% auto;
+	background-position: 0 50%;
+	height: 360px;
+	width: 100%;
+	margin-top: 5px;
+}
+
 /*
   ========================================
   Tours-Glider
@@ -605,7 +669,7 @@ textarea {
 
 /*
   ========================================
-  Pilots
+  Pilots/Owners
   ========================================
 */
 .owner {
