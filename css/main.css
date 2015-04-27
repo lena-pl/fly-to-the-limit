@@ -19,6 +19,11 @@ body {
 	background-color: #fff;
 }
 
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
 /*
   ========================================
   Clearfix
@@ -169,7 +174,6 @@ nav ul li {
 }
 
 nav a {
-	text-decoration: none;
 	color: #FFF;
 	padding: 10px 35px 10px 35px;
 	font-size: 24px;
@@ -241,14 +245,15 @@ input,
 select,
 textarea {
 	font: 300 16px/22px "Open Sans", Helvetica, Arial, sans-serif;
+	color: #131f2d;
 }
 
 #enquiries input,
 #enquiries select,
 #enquiries textarea {
-	border: 1px solid #666464;
+	border: 1px solid #131f2d;
+	color: #131f2d;
 	border-radius: 3px;
-	color: #888;
 	display: block;
 	margin: 5px 0 27px 0;
 	padding: 5px 8px;
@@ -353,10 +358,6 @@ textarea {
 	text-align: right;
 }
 
-.site-map a {
-	text-decoration: none;
-	color: #FFF;
-}
 .site-map ul a {
 	font-variant: small-caps;
 }
@@ -380,6 +381,7 @@ textarea {
 .html-map a {
 	color: #000;
 	font-size: 16px;
+	text-decoration: underline;
 }
 
 .html-map a:hover {
@@ -408,11 +410,6 @@ textarea {
 	right: -10px;
 }
 
-.back-to-top a {
-	text-decoration: none;
-	color: #FFF;
-}
-
 .back-to-top a:hover {
 	color: rgba(102, 100, 100, 1);
 }
@@ -438,7 +435,6 @@ textarea {
 }
 
 .book-button a{
-	text-decoration: none;
 	text-transform: uppercase;
 	color: #131f2d;
 	background-color: #FFF;
@@ -452,32 +448,6 @@ textarea {
 }
 
 .book-button a:hover{
-	color: #FFF;
-	background-color: #131f2d;
-}
-
-.tour-button {
-	margin-left: 390px;
-	margin-right: 390px;
-	margin-bottom: 50px;
-	margin-top: -20px;
-}
-
-.tour-button a{
-	text-decoration: none;
-	text-transform: uppercase;
-	color: #131f2d;
-	background-color: #FFF;
-	border-radius: 3px;
-	border: 1px solid #131f2d;
-	cursor: pointer;
-	display: inline-block;
-	letter-spacing: 0.5px;
-	margin: 0 auto;
-	padding: 10px 30px;
-}
-
-.tour-button a:hover{
 	color: #FFF;
 	background-color: #131f2d;
 }
@@ -523,9 +493,9 @@ textarea {
 #bookings input,
 #bookings select,
 #bookings textarea {
-	border: 1px solid #666464;
+	border: 1px solid #131f2d;
 	border-radius: 3px;
-	color: #888;
+	color: #131f2d;
 	display: block;
 	margin: 5px 0 50px 0;
 	padding: 5px 8px;
@@ -543,6 +513,16 @@ textarea {
 
 #bookings textarea {
 	height: 150px;
+}
+
+:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+:focus::-moz-placeholder {
+	color: transparent;
+}
+:focus:-ms-input-placeholder {  
+   color: transparent;  
 }
 
 .bookings-name {
@@ -676,7 +656,6 @@ textarea {
 }
 
 .tour-option a {
-	text-decoration: none;
 	color: #666464;
 	position: relative;
 	display: inline-block;
@@ -723,6 +702,30 @@ textarea {
 
 #container .bottom-margin {
 	margin-bottom: 70px;
+}
+
+.tour-button {
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: -20px;
+}
+
+.tour-button a{
+	text-transform: uppercase;
+	color: #131f2d;
+	background-color: #FFF;
+	border-radius: 3px;
+	border: 1px solid #131f2d;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 0.5px;
+	margin: 0 auto;
+	padding: 10px 30px;
+}
+
+.tour-button a:hover{
+	color: #FFF;
+	background-color: #131f2d;
 }
 
 /*
@@ -835,7 +838,6 @@ textarea {
 }
 
 .pilot a {
-	text-decoration: none;
 	color: #666464;
 	position: relative;
 	display: inline-block;
