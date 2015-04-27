@@ -43,7 +43,7 @@ body {
   ========================================
 */
 
-h1 {
+h2 {
 	font-weight: 700;
 	font-size: 35px;
 	color: #c5c2c2;
@@ -52,32 +52,51 @@ h1 {
 	padding-bottom: 20px;
 }
 
-.alt h1 {
+.alt h2 {
 	margin-top: 70px;
 	margin-bottom: -10px;
 }
 
-h2 {
+.html-map h2 {
+	text-align: left;
+}
+
+h3 {
 	font-size: 35px;
 	font-weight: 800;
 	text-transform: uppercase;
 }
 
-h3 {
+.alt h3 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 400;
+	margin-top: 50px;
+	text-transform: none;
+	color: #c5c2c2;
+}
+
+h4 {
 	font-weight: 600;
 	font-size: 20px;
 	padding-bottom: 20px;
 }
 
-h4 {
+
+h5 {
 	text-align: center;
 	font-weight: 300;
 	font-size: 18px;
 	padding-top: 10px;
 	padding-bottom: 20px;
+	text-transform: uppercase;
 }
 
-h5 {
+.col-8 h5 {
+	text-transform: none;
+}
+
+h6 {
 	font-weight: 300;
 	font-size: 20px;
 	padding-bottom: 20px;
@@ -85,6 +104,12 @@ h5 {
 
 .subheading {
 	font-weight: 600;
+}
+
+.gallery h2 {
+	padding-top: 30px;
+	padding-bottom: 0;
+	margin-bottom: -20px;
 }
 
 /*
@@ -154,11 +179,15 @@ nav a {
 	line-height: 53px;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
 	color: rgba(102, 100, 100, 1);
 }
 
-nav a:hover:after {
+nav a:hover:after,
+nav a.active:after,
+nav a.active:hover:after,
+nav a:focus:after {
 	content: " ";
 	position: absolute;
 	top: 0;
@@ -169,6 +198,15 @@ nav a:hover:after {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+nav a.active:after {
+	background-image: url(../images/triangle-selector-active.png);
+}
+
+nav a:focus {
+	outline: 0;
+}
+
 
 /*
   ========================================
@@ -301,6 +339,10 @@ textarea {
 	margin: 0 5px;
 }
 
+.social a {
+	display: inline-block;
+}
+
 /*
   ========================================
   Footer Site Map
@@ -311,13 +353,15 @@ textarea {
 	text-align: right;
 }
 
-.site-map ul a {
-	font-variant: small-caps;
+.site-map a {
 	text-decoration: none;
 	color: #FFF;
 }
+.site-map ul a {
+	font-variant: small-caps;
+}
 
-.site-map ul a:hover {
+.site-map a:hover {
 	color: rgba(102, 100, 100, 1);
 }
 
@@ -328,6 +372,29 @@ textarea {
 .site-map ul {
 	padding: 10px 0;
 }
+
+#container .html-map ol {
+	margin-bottom: 100px;
+}
+
+.html-map a {
+	color: #000;
+	font-size: 16px;
+}
+
+.html-map a:hover {
+	text-decoration: none;
+}
+
+.html-map li {
+	margin: 7px 0;
+	list-style-type: none;
+}
+
+.html-map ul li {
+	margin-left: 25px;
+}
+
 
 /*
   ========================================
@@ -389,6 +456,32 @@ textarea {
 	background-color: #131f2d;
 }
 
+.tour-button {
+	margin-left: 390px;
+	margin-right: 390px;
+	margin-bottom: 50px;
+	margin-top: -20px;
+}
+
+.tour-button a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #131f2d;
+	background-color: #FFF;
+	border-radius: 3px;
+	border: 1px solid #131f2d;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 0.5px;
+	margin: 0 auto;
+	padding: 10px 30px;
+}
+
+.tour-button a:hover{
+	color: #FFF;
+	background-color: #131f2d;
+}
+
 /*
   ========================================
   About
@@ -408,7 +501,7 @@ textarea {
 .video {
 	width: 886px;
 	height: 498px;
-	margin: 10px 37px 60px 37px;
+	margin: 20px 37px 30px 37px;
 }
 
 /*
@@ -555,8 +648,15 @@ textarea {
 	margin-top: 5px;
 }
 
+.price {
+	padding: 10px 0 10px 0;
+	font-weight: 600;
+	font-size: 22px;
+	font-variant: small-caps;
+}
+
 .tour-option {
-	padding: 50px 0 70px 0;
+	padding: 30px 0 50px 0;
 	text-align: center;
 }
 
@@ -596,11 +696,33 @@ textarea {
 	border-radius: 50%;
 }
 
+.tour-option a:focus:after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(102, 100, 100, 0.5);
+	background-image: url(../images/blip-map-1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+}
+
 .tour-option img {
 	display: block;
 	margin: auto;
 	border-radius: 50%;
 	height: 185px;
+}
+
+.scenic {
+	margin: 0 110px 0 110px;
+}
+
+#container .bottom-margin {
+	margin-bottom: 70px;
 }
 
 /*
@@ -661,7 +783,7 @@ textarea {
 	background-color: #131f2d;
 	background-image: url(../images/cristian-bortes-miting-aviatic-cluj-napoca-2007-flickr-unchanged.jpg);
 	background-size: 100% auto;
-	background-position: 0 50%;
+	background-position: 0 40%;
 	height: 360px;
 	width: 100%;
 	margin-top: 5px;
@@ -677,12 +799,14 @@ textarea {
 	text-align: center;
 }
 
-.owner img {
+.owner img,
+.pilot img {
 	display: block;
 	margin: auto;
 	border-radius: 50%;
 	height: 185px;
 }
+
 
 .owner h4 {
 	text-transform: uppercase;
@@ -717,7 +841,8 @@ textarea {
 	display: inline-block;
 }
 
-.pilot a:hover:after {
+.pilot a:hover:after,
+.pilot a:focus:after {
 	content: " ";
 	position: absolute;
 	top: 0;
@@ -729,13 +854,6 @@ textarea {
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 50%;
-}
-
-.pilot img {
-	display: block;
-	margin: auto;
-	border-radius: 50%;
-	height: 185px;
 }
 
 /*
@@ -877,4 +995,93 @@ textarea {
 
 .popup-gallery a {
 	display: inline-block;
+}
+
+/*
+  ========================================
+  Print Style Sheet
+  ========================================
+*/
+
+@media print {
+
+	#container {
+		margin: 0 auto;
+	}
+
+	h2 {
+		margin-top: -70px;
+	}
+
+	h3 {
+		margin-top: -50px;
+	}
+
+	.alt h3 {
+		margin-top: -5px;
+	}
+
+	h5 {
+		margin-top: -30px;
+		margin-bottom: 10px;
+	}
+
+	nav {
+		display: none;
+	}
+
+	.owner, .pilot {
+		padding: 30px 0 10px 0;
+	}
+
+	[class*='-highlight'] {
+		margin: 10px auto 0 auto;
+	}
+
+	[class*='-feature'] {
+		max-height: 250px;
+	}
+
+	[class*='button'] {
+		display: none !important;
+	}
+
+	.alt h2 {
+		margin-top: 10px;
+	}
+
+	.about {
+		display: none;
+	}
+
+	.col-8 h5 {
+		margin-top: 5px;
+		margin-bottom: 30px;
+	}
+
+	::-webkit-input-placeholder {
+      color: transparent;
+  	}
+  	:-moz-placeholder {
+      color: transparent;
+  	}
+  	::-moz-placeholder {
+      color: transparent;
+  	}
+  	:-ms-input-placeholder {
+      color: transparent;
+  	}
+
+	.carousel {
+		display: none !important;
+	}
+
+	iframe {
+		display: none;
+	}
+
+   footer {
+   	display: none;
+   }
+
 }

@@ -19,7 +19,7 @@
 		<header> 
 			<div class="col-row cf">
 				<div class="col-3">
-					<img  src="images/fly-to-the-limit-logo.svg" alt="Fly to the Limit Logo" height="100" width="229">
+					<h1><a href="index.html"><img  src="images/fly-to-the-limit-logo.svg" alt="Fly to the Limit Logo" height="100" width="229"></a></h1>
 				</div>
 
 				<div class="col-7"><span>&nbsp;</span></div>
@@ -38,15 +38,15 @@
 	             --><li><a href="tours.html">tours</a></li><!--
 	             --><li><a href="about.html">about us</a></li><!--
 	             --><li><a href="location.html">location</a></li><!--
-	             --><li><a href="bookings.html">bookings</a></li>
+	             --><li><a href="bookings.html" class="active">bookings</a></li>
 				</ul>
 			</nav>
 
 		<div class="bookings-feature cf">
 
 				<div class="heading-highlight">
-					<h2>Booking Enquiries</h2>
-					<h3>Start your adventure today.</h3>
+					<h3>Booking Enquiries</h3>
+					<h4>Start your adventure today.</h4>
 					<p>We want to tailor an adventure package that’s right for you. Fill out the form below so we can get an idea of your needs.</p>
 				</div>
 		</div>
@@ -57,13 +57,13 @@
 			<div class="col-2"><span>&nbsp;</span></div>
 
 			<div class="col-8">
-				<h1>Enquire about our flights!</h1>
+				<h2>Enquire about our flights!</h2>
 			</div>
 
 			<div class="col-2"><span>&nbsp;</span></div>
 		</div>
 
-		<form id="bookings" method="post" novalidate>
+		<form id="bookings" method="post" action="http://brettt.yoobee.net.nz/formtest/" novalidate>
 			<div class= "col-row">
 				<div class="col-2"><span>&nbsp;</span></div>
 				<div class=" col-4">
@@ -103,13 +103,13 @@
 					<label for="people">
 						<span class="bookings-people">Number of Passengers</span>
 					</label>
-					<input id="people" type="text" name="people" placeholder="1" required>
+					<input id="people" type="text" name="people" placeholder="Enter the number of passengers" required>
 					<div id="people-error" class="danger"></div>
 				</div>
 				<div class="col-4">
 					<label>
 						Choose a Tour Option
-						<select name="tours">
+						<select id="tours" name="tours">
 							<option value="Glider 1hr" selected>Glider 2hr Scenic Tour</option>
 							<option value="Glider 2hr">Glider 1hr Scenic Tour</option>
 							<option value="Helicopter 1hr">Helicopter 2hr Scenic Tour</option>
@@ -122,6 +122,7 @@
 							<option value="Hiking">Multi-Day High Country Tramp</option>
 						</select>
 					</label>
+					<div id="tours-error"></div>
 				</div>
 				<div class="col-2"><span>&nbsp;</span></div>
 			</div>
@@ -153,8 +154,8 @@
 			<div class="footer-content cf">
 				<div class="col-row">
 
-					<form id="enquiries" class="col-6" method="post" novalidate>
-						<h5>Get in touch!</h5>
+					<form id="enquiries" action="http://brettt.yoobee.net.nz/formtest/" class="col-6" method="post" novalidate>
+						<h6>Get in touch!</h6>
 
 						<div class="field">
 							<label for="contact-name">
@@ -187,7 +188,7 @@
 
 					<div class="in-footer col-3">
 						<div class="find-us">
-							<h5>Find Us</h5>
+							<h6>Find Us</h6>
 							<p class="phone-number">0800 limitless</p>
 							<p>15 Wanaka Drive,</p>
 							<p>Wanaka, NZ</p>
@@ -204,17 +205,22 @@
 
 					<div class="in-footer col-2">
 						<div class="site-map">
-							<h5>Site Map</h5>
+							<h6><a href="sitemap.html">Site Map</a></h6>
 							<ul>
 								<li><a href="index.html">home</a></li><!--
 				             --><li><a href="tours.html">tours</a></li><!--
+				             --><li><a href="tours-heli.html">heli tours</a></li><!--
+				             --><li><a href="tours-stunt.html">stunt tours</a></li><!--
+				             --><li><a href="tours-glider.html">glider tours</a></li><!--
+				             --><li><a href="tours-cessna.html">cessna tours</a></li><!--
 				             --><li><a href="about.html">about us</a></li><!--
 				             --><li><a href="location.html">location</a></li><!--
-				             --><li><a href="bookings.html">bookings</a></li>
+				             --><li><a href="bookings.html">bookings</a></li><!--
+				             --><li><a href="sitemap.html#photo-credits">photo credits</a></li>
 							</ul>
 						</div>
 
-						<h5 class="back-to-top"><a href="#">Back to top</a></h5>
+						<h6 class="back-to-top"><a href="#">Back to top</a></h6>
 					</div>
 
 				</div>
