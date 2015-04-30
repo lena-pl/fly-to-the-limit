@@ -474,6 +474,11 @@ textarea {
 	margin: 20px 37px 30px 37px;
 }
 
+.certificates img{
+	margin-top: -30px;
+	margin-bottom: 50px;
+}
+
 /*
   ========================================
   Bookings
@@ -956,27 +961,27 @@ textarea {
 }
 
 .one {
-	background-image: url("../images/otago-lakes-1.JPG"); 
+	background-image: url("../images/otago-lakes-1.jpg"); 
 	background-size: 100% auto;
 	background-position: 0 60%;
 }
 .two {
-	background-image: url("../images/mikhail-keniya-qtwn.JPG"); 
+	background-image: url("../images/mikhail-keniya-qtwn.jpg"); 
 	background-size: 100% auto;
 	background-position: 0 20%;
 }
 .three {
-	background-image: url("../images/queenstown-mountain.JPG");
+	background-image: url("../images/queenstown-mountain.jpg");
 	background-size: 100% auto;
 	background-position: 0 20%; 
 }
 .four {
-	background-image: url("../images/lakes-2.JPG"); 
+	background-image: url("../images/lakes-2.jpg"); 
 	background-size: 100% auto;
 	background-position: 0 40%;
 }
 .five {
-	background-image: url("../images/lakes-3.JPG");
+	background-image: url("../images/lakes-3.jpg");
 	background-size: 100% auto;
 	background-position: 0 0; 
 }
